@@ -138,7 +138,41 @@ function thisCode()
 
     end
 
-   
+    local veryImportantWaitTime = 0.5
+
+    task.spawn(function()
+
+        while task.wait(veryImportantWaitTime) do
+
+            pcall(function()
+
+                for i,v in pairs(game.CoreGui:GetDescendants()) do
+
+                    pcall(function()
+
+                        if string.find(v.Name,"ErrorMessage") then
+
+                            if string.find(v.Text,"Security kick") then
+
+                                veryImportantWaitTime = 1e9
+
+                                Teleport()
+
+                            end
+
+                        end
+
+                    end)
+
+                end
+
+            end)
+
+        end
+
+    end)
+
+
 
     local AllowRunService = true
 
@@ -160,9 +194,9 @@ function thisCode()
 
         CoreGui:SetCore("SendNotification", {
 
-            Title = "Auto Chest",
+            Title = "NotHub",
 
-            Text = "Subscribe To Rick Hub",
+            Text = "NotHub By WinnyEdiyHub",
 
             Duration = math.huge,
 
@@ -178,9 +212,9 @@ function thisCode()
 
     CoreGui:SetCore("SendNotification", {
 
-        Title = "Start Auto Farm Chest",
+        Title = "Start Auto Chest",
 
-        Text = "Subscribe To Rick Hub",
+        Text = "Start Auto Chest",
 
         Duration = math.huge,
 
@@ -312,6 +346,6 @@ if (_G.Team == "Pirates" or _G.Team == "Marines") and not join then
 
     until join == true
 
-    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible = true
+    game:GetService("Players").LocalPlayer.PlayerGui.Main.ChooseTeam.Visible = false
 
 end
