@@ -236,7 +236,7 @@ function thisCode()
 
             end
 
-            task.wait(0.2)
+            task.wait()
 
         end
 
