@@ -316,7 +316,7 @@ if (_G.Team == "Pirates" or _G.Team == "Marines") and not join then
 
                 end
 
-            elseif _G.Team == "Marines" then
+            elseif _G.Team == "Marines" the
 
                 for i,v in pairs({"MouseButton1Click", "MouseButton1Down", "Activated"}) do
 
