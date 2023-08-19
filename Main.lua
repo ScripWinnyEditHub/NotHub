@@ -212,7 +212,7 @@ function thisCode()
 
     CoreGui:SetCore("SendNotification", {
 
-        Title = "By NotHub",
+        Title = "Start Auto Farm Chest",
 
         Text = "By NotHub",
 
