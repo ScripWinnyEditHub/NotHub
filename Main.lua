@@ -36,7 +36,7 @@ function thisCode()
 
         else
 
-            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+            Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
 
         end
 
@@ -194,9 +194,9 @@ function thisCode()
 
         CoreGui:SetCore("SendNotification", {
 
-            Title = "NotHub",
+            Title = "Start Auto Chest",
 
-            Text = "NotHub By WinnyEdiyHub",
+            Text = "Start Auto Chest",
 
             Duration = math.huge,
 
@@ -212,9 +212,9 @@ function thisCode()
 
     CoreGui:SetCore("SendNotification", {
 
-        Title = "Start Auto Chest",
+        Title = "By NotHub",
 
-        Text = "Start Auto Chest",
+        Text = "By NotHub",
 
         Duration = math.huge,
 
@@ -315,8 +315,8 @@ if (_G.Team == "Pirates" or _G.Team == "Marines") and not join then
                     end
 
                 end
-             
-                elseif _G.Team == "Marines" then
+
+            elseif _G.Team == "Marines" then
 
                 for i,v in pairs({"MouseButton1Click", "MouseButton1Down", "Activated"}) do
 
@@ -327,7 +327,7 @@ if (_G.Team == "Pirates" or _G.Team == "Marines") and not join then
                     end
 
                 end
-                    
+
             else
 
                 for i,v in pairs({"MouseButton1Click", "MouseButton1Down", "Activated"}) do
